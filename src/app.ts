@@ -13,7 +13,7 @@ fastify.get("/cv.pdf", async (_, reply) => {
     throw new Error("FRONTEND_URL is not set");
   }
 
-  await page.goto(`${env.FRONTEND_URL}/pdf`, {
+  await page.goto(`${env.FRONTEND_URL}/#/pdf`, {
     waitUntil: "networkidle",
   });
 
